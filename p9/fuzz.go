@@ -8,6 +8,7 @@ import (
 	"github.com/u-root/u-root/pkg/ulog"
 )
 
+// Fuzz fuzzes stuff
 func Fuzz(data []byte) int {
 	buf := bytes.NewBuffer(data)
 	tag, msg, err := recv(ulog.Null, buf, DefaultMessageSize, msgRegistry.get)
